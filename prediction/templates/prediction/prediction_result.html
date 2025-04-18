@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat</title>
+    <link rel="stylesheet" href="{% static 'prediction/css/prediction_result.css' %}">
+</head>
+<body>
+
+    <form class="result-container">
+        <div class="form-header">
+            <div class="logo-wrapper">
+                <img src="{% static 'prediction/img/logo_supmti.png' %}" alt="Logo" class="logo">
+            </div>
+        </div>
+
+        <h2>Résultat de la prédiction</h2>
+        <p><strong>Statut prédit :</strong> {{ statut }}</p>
+
+        <div class="form-actions">
+            <a href="{% url 'predict' %}" class="btn">Faire une nouvelle prédiction</a>
+            <a href="{% url 'home' %}" class="btn">Retour à l'accueil</a>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualisation des données</title>
+    <link rel="stylesheet" href="{% static 'prediction/css/visualisation.css' %}">
+</head>
+<body>
+<div class="visualisation-container">
+    <h2 align=center>Visualisation des données</h2>
+
+    <div class="graph-selection">
+        <a href="?graph=age_distribution" class="btn">Répartition des âges</a>
+        <a href="?graph=salary_boxplot" class="btn">Boxplot des salaires</a>
+        <a href="?graph=experience_salary" class="btn">Expérience vs Salaire</a>
+        <a href="?graph=status_experience" class="btn">Statut vs Expérience</a>
+        <a href="?graph=status_education" class="btn">Statut vs Éducation</a>
+    </div>
+
+    {% if img_data %}
+    <div class="graph-container">
+        <img src="data:image/png;base64,{{ img_data }}" alt="Graphique généré" />
+    </div>
+    {% else %}
+    <p>Aucun graphique disponible. Veuillez en sélectionner un ci-dessus.</p>
+    {% endif %}
+
+    <div class="back-home">
+        <a href="{% url 'home' %}" class="btn">← Retour à l'accueil</a>
+    </div>
+</div>
+</body>
+</html>

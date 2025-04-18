@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'prediction/css/login.css' %}" rel="stylesheet">
+</head>
+<body>
+
+    <form action="{% url 'login' %}" method="post" class="login-form">
+        <div class="form-header">
+            <div class="logo-wrapper">
+                <img src="{% static 'prediction/img/logo_supmti.png' %}" alt="Logo" class="logo">
+            </div>
+        </div>
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="form-actions">
+            <input type="submit" value="Se connecter" class="submit-btn">
+            <a href="{% url 'register' %}" class="register-link">Créer un compte</a>
+        </div>
+    </form>
+
+</body>
+</html>

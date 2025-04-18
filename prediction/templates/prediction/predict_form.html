@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de Prédiction</title>
+    <link rel="stylesheet" href="{% static 'prediction/css/predict_form.css' %}">
+</head>
+<body class="animated-background">
+    <h2 align="center">Formulaire de Prédiction du Statut d'Emploi</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="sexe">Sexe :</label>
+        <select name="sexe" required>
+            <option value="">-- Choisir --</option>
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+        </select>
+
+        <label for="age">Âge :</label>
+        <input type="number" name="age" min="15" max="100" required>
+
+        <label for="education">Niveau d'éducation :</label>
+        <select name="education" required>
+            <option value="">-- Choisir --</option>
+            <option value="Licence">Licence</option>
+            <option value="Master">Master</option>
+        </select>
+
+        <label for="experience">Années d'expérience :</label>
+        <input type="number" name="experience" min="0" max="50" required>
+
+        <label for="secteur">Secteur souhaité :</label>
+        <select name="secteur" required>
+            <option value="">-- Choisir --</option>
+            <option value="Construction">Construction</option>
+            <option value="Finance">Finance</option>
+            <option value="Éducation">Éducation</option>
+            <option value="IT">IT</option>
+            <option value="Santé">Santé</option>
+        </select>
+
+        <label for="salaire">Salaire espéré :</label>
+        <input type="number" name="salaire" min="0" required>
+
+        <label for="contrat">Type de contrat souhaité :</label>
+        <select name="contrat" required>
+            <option value="">-- Choisir --</option>
+            <option value="CDI (Contrat à Durée Indéterminée)">CDI (Contrat à Durée Indéterminée)</option>
+            <option value="CDD (Contrat à Durée Déterminée)">CDD (Contrat à Durée Déterminée)</option>
+            <option value="Indépendant/Freelance">Indépendant/Freelance</option>
+        </select>
+
+        <button type="submit">Prédire</button>
+
+        <div class="back-link">
+            <a href="{% url 'home' %}">← Retour à l'accueil</a>
+        </div>
+    </form>
+</body>
+</html>
