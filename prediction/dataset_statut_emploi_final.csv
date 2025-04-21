@@ -1,201 +1,201 @@
-﻿Nom complet;Sexe;Âge;Niveau d'éducation;Expérience (années);Secteur souhaité;Salaire espéré;Type de contrat souhaité;Statut d'emploi
+Nom complet;Sexe;Âge;Niveau d'éducation;Expérience (années);Secteur souhaité;Salaire espéré;Type de contrat souhaité;Statut d'emploi
 Thomas Martin;Femme;27;Master;4;Construction;73954;CDI (Contrat à Durée Indéterminée);0
 Sophie Petit;Homme;35;Master;7;Finance;37810;Indépendant/Freelance;1
-Alice Richard;Homme;45;Licence;28;Éducation;49722;CDD (Contrat à Durée Déterminée);0
+Alice Richard;Homme;45;Licence;27;Éducation;49722;CDD (Contrat à Durée Déterminée);0
 Camille Martin;Homme;42;Licence;15;Éducation;99148;CDD (Contrat à Durée Déterminée);1
 Manon Thomas;Homme;58;Licence;24;Construction;42397;CDI (Contrat à Durée Indéterminée);0
 Sophie Petit;Homme;38;Licence;13;Finance;46287;CDI (Contrat à Durée Indéterminée);0
 Sophie Moreau;Homme;53;Licence;25;IT;66097;Indépendant/Freelance;0
-Sophie Petit;Homme;26;Licence;27;Éducation;31711;CDD (Contrat à Durée Déterminée);0
+Sophie Petit;Homme;26;Licence;8;Éducation;31711;CDD (Contrat à Durée Déterminée);0
 Thomas Robert;Femme;45;Licence;19;IT;26665;Indépendant/Freelance;0
 Hugo Dubois;Femme;30;Licence;6;Finance;93125;CDI (Contrat à Durée Indéterminée);0
 Camille Moreau;Homme;56;Licence;11;Éducation;23758;CDI (Contrat à Durée Indéterminée);0
 Alice Dubois;Homme;59;Master;7;Finance;51659;CDI (Contrat à Durée Indéterminée);0
-Hugo Martin;Homme;25;Licence;25;IT;27791;CDD (Contrat à Durée Déterminée);0
-Lucas Bernard;Femme;34;Licence;31;IT;80818;Indépendant/Freelance;0
-Alice Durand;Femme;41;Licence;27;Finance;39087;CDD (Contrat à Durée Déterminée);1
+Hugo Martin;Homme;25;Licence;7;IT;27791;CDD (Contrat à Durée Déterminée);0
+Lucas Bernard;Femme;34;Licence;16;IT;80818;Indépendant/Freelance;0
+Alice Durand;Femme;41;Licence;23;Finance;39087;CDD (Contrat à Durée Déterminée);1
 Manon Lefebvre;Femme;52;Licence;25;Construction;77033;CDD (Contrat à Durée Déterminée);1
 Lucas Dubois;Femme;63;Master;39;Santé;95912;CDD (Contrat à Durée Déterminée);1
 Alice Dubois;Homme;32;Master;7;Construction;87626;Indépendant/Freelance;1
 Sophie Dubois;Homme;37;Licence;12;Construction;58467;Indépendant/Freelance;1
-Hugo Dubois;Homme;26;Master;9;Éducation;31182;CDI (Contrat à Durée Indéterminée);1
+Hugo Dubois;Homme;26;Master;8;Éducation;31182;CDI (Contrat à Durée Indéterminée);1
 Hugo Petit;Femme;60;Master;38;Éducation;97889;CDD (Contrat à Durée Déterminée);1
 Jean Petit;Femme;37;Master;6;Finance;20788;CDD (Contrat à Durée Déterminée);1
-Jean Martin;Femme;34;Master;23;Santé;35961;CDI (Contrat à Durée Indéterminée);1
-Nathan Richard;Femme;31;Master;33;Éducation;45163;Indépendant/Freelance;1
+Jean Martin;Femme;34;Master;16;Santé;35961;CDI (Contrat à Durée Indéterminée);1
+Nathan Richard;Femme;31;Master;13;Éducation;45163;Indépendant/Freelance;1
 Hugo Dubois;Homme;49;Master;5;Santé;87854;CDI (Contrat à Durée Indéterminée);1
 Emma Moreau;Homme;59;Licence;6;Santé;86174;CDD (Contrat à Durée Déterminée);1
-Nathan Dubois;Homme;35;Master;19;Éducation;38225;Indépendant/Freelance;1
+Nathan Dubois;Homme;35;Master;17;Éducation;38225;Indépendant/Freelance;1
 Nathan Dubois;Homme;53;Master;30;Construction;89193;Indépendant/Freelance;0
-Alice Moreau;Homme;22;Master;12;Construction;90332;CDD (Contrat à Durée Déterminée);0
+Alice Moreau;Homme;22;Master;4;Construction;90332;CDD (Contrat à Durée Déterminée);0
 Hugo Petit;Homme;53;Licence;11;Éducation;42094;Indépendant/Freelance;1
 Sophie Martin;Homme;51;Licence;4;IT;73683;CDD (Contrat à Durée Déterminée);0
 Sophie Thomas;Femme;51;Master;16;Construction;88839;CDD (Contrat à Durée Déterminée);1
-Emma Richard;Femme;22;Licence;21;Construction;94167;Indépendant/Freelance;1
-Hugo Durand;Homme;50;Master;38;Finance;35993;CDD (Contrat à Durée Déterminée);1
+Emma Richard;Femme;22;Licence;4;Construction;94167;Indépendant/Freelance;1
+Hugo Durand;Homme;50;Master;32;Finance;35993;CDD (Contrat à Durée Déterminée);1
 Hugo Martin;Homme;30;Licence;9;Éducation;90327;CDI (Contrat à Durée Indéterminée);0
 Lucas Durand;Homme;35;Licence;4;Construction;58811;CDD (Contrat à Durée Déterminée);0
 Lucas Dubois;Homme;51;Master;27;Construction;36117;Indépendant/Freelance;0
 Thomas Moreau;Homme;30;Master;8;Éducation;93578;CDI (Contrat à Durée Indéterminée);1
-Alice Dubois;Homme;37;Licence;29;Finance;26397;Indépendant/Freelance;0
-Nathan Thomas;Femme;22;Licence;14;Santé;65312;CDD (Contrat à Durée Déterminée);0
-Sophie Bernard;Homme;18;Master;2;Éducation;29755;CDI (Contrat à Durée Indéterminée);0
-Nathan Thomas;Femme;27;Master;25;Finance;25774;CDD (Contrat à Durée Déterminée);1
+Alice Dubois;Homme;37;Licence;19;Finance;26397;Indépendant/Freelance;0
+Nathan Thomas;Femme;22;Licence;4;Santé;65312;CDD (Contrat à Durée Déterminée);0
+Sophie Bernard;Homme;18;Master;0;Éducation;29755;CDI (Contrat à Durée Indéterminée);0
+Nathan Thomas;Femme;27;Master;9;Finance;25774;CDD (Contrat à Durée Déterminée);1
 Manon Dubois;Femme;51;Licence;12;Finance;79732;CDD (Contrat à Durée Déterminée);1
 Sophie Lefebvre;Homme;62;Master;19;IT;72338;Indépendant/Freelance;0
-Alice Thomas;Femme;21;Master;15;Éducation;44304;Indépendant/Freelance;1
+Alice Thomas;Femme;21;Master;3;Éducation;44304;Indépendant/Freelance;1
 Sophie Durand;Femme;55;Licence;24;Éducation;60284;Indépendant/Freelance;0
-Emma Robert;Homme;38;Licence;37;Finance;96733;CDI (Contrat à Durée Indéterminée);0
+Emma Robert;Homme;38;Licence;20;Finance;96733;CDI (Contrat à Durée Indéterminée);0
 Manon Durand;Femme;55;Master;19;Éducation;36041;Indépendant/Freelance;0
 Thomas Martin;Homme;50;Licence;5;Santé;78978;Indépendant/Freelance;0
-Manon Robert;Femme;46;Master;30;Construction;45441;CDD (Contrat à Durée Déterminée);0
-Emma Dubois;Homme;34;Master;27;Éducation;70656;CDD (Contrat à Durée Déterminée);0
+Manon Robert;Femme;46;Master;28;Construction;45441;CDD (Contrat à Durée Déterminée);0
+Emma Dubois;Homme;34;Master;16;Éducation;70656;CDD (Contrat à Durée Déterminée);0
 Camille Bernard;Homme;61;Licence;25;Finance;45387;CDI (Contrat à Durée Indéterminée);0
 Lucas Martin;Homme;58;Licence;13;Construction;99369;Indépendant/Freelance;1
 Nathan Robert;Femme;44;Master;24;Santé;61129;CDI (Contrat à Durée Indéterminée);1
 Jean Thomas;Femme;51;Master;17;IT;93956;CDD (Contrat à Durée Déterminée);1
-Sophie Richard;Homme;29;Licence;36;Construction;90725;Indépendant/Freelance;0
-Emma Lefebvre;Femme;34;Master;21;Éducation;84784;CDD (Contrat à Durée Déterminée);0
+Sophie Richard;Homme;29;Licence;11;Construction;90725;Indépendant/Freelance;0
+Emma Lefebvre;Femme;34;Master;16;Éducation;84784;CDD (Contrat à Durée Déterminée);0
 Jean Robert;Femme;53;Licence;21;Santé;92732;CDD (Contrat à Durée Déterminée);1
 Nathan Bernard;Femme;40;Master;12;Éducation;95294;CDD (Contrat à Durée Déterminée);1
-Hugo Martin;Homme;48;Master;35;Finance;68985;CDD (Contrat à Durée Déterminée);0
+Hugo Martin;Homme;48;Master;30;Finance;68985;CDD (Contrat à Durée Déterminée);0
 Sophie Petit;Homme;54;Licence;23;Éducation;71566;CDD (Contrat à Durée Déterminée);1
 Jean Durand;Femme;62;Master;28;Éducation;20225;Indépendant/Freelance;0
-Thomas Robert;Femme;34;Master;20;Éducation;77669;CDI (Contrat à Durée Indéterminée);1
-Sophie Lefebvre;Femme;23;Master;17;IT;42309;CDD (Contrat à Durée Déterminée);1
-Jean Lefebvre;Femme;22;Licence;22;Finance;58250;CDI (Contrat à Durée Indéterminée);0
+Thomas Robert;Femme;34;Master;16;Éducation;77669;CDI (Contrat à Durée Indéterminée);1
+Sophie Lefebvre;Femme;23;Master;5;IT;42309;CDD (Contrat à Durée Déterminée);1
+Jean Lefebvre;Femme;22;Licence;4;Finance;58250;CDI (Contrat à Durée Indéterminée);0
 Lucas Dubois;Homme;52;Master;29;Éducation;90931;CDI (Contrat à Durée Indéterminée);0
 Nathan Dubois;Femme;36;Master;5;Finance;67180;CDD (Contrat à Durée Déterminée);0
-Thomas Lefebvre;Femme;22;Licence;34;Santé;97279;CDD (Contrat à Durée Déterminée);1
+Thomas Lefebvre;Femme;22;Licence;4;Santé;97279;CDD (Contrat à Durée Déterminée);1
 Alice Martin;Femme;36;Master;16;Santé;57014;CDI (Contrat à Durée Indéterminée);1
 Sophie Moreau;Homme;34;Licence;16;Santé;84587;CDI (Contrat à Durée Indéterminée);1
 Sophie Dubois;Femme;53;Licence;7;Finance;56705;Indépendant/Freelance;1
-Jean Moreau;Homme;21;Licence;29;Finance;70165;CDD (Contrat à Durée Déterminée);1
-Hugo Thomas;Homme;23;Master;36;Éducation;31235;CDI (Contrat à Durée Indéterminée);0
+Jean Moreau;Homme;21;Licence;3;Finance;70165;CDD (Contrat à Durée Déterminée);1
+Hugo Thomas;Homme;23;Master;5;Éducation;31235;CDI (Contrat à Durée Indéterminée);0
 Hugo Lefebvre;Femme;63;Licence;23;IT;59915;CDD (Contrat à Durée Déterminée);1
 Lucas Martin;Femme;27;Licence;0;Finance;94317;Indépendant/Freelance;1
 Camille Thomas;Homme;61;Master;23;IT;32867;CDD (Contrat à Durée Déterminée);0
-Thomas Bernard;Homme;34;Licence;25;Éducation;90652;CDD (Contrat à Durée Déterminée);1
-Jean Bernard;Femme;24;Licence;12;Éducation;60453;CDD (Contrat à Durée Déterminée);1
-Thomas Lefebvre;Homme;22;Master;32;Construction;27756;Indépendant/Freelance;1
+Thomas Bernard;Homme;34;Licence;16;Éducation;90652;CDD (Contrat à Durée Déterminée);1
+Jean Bernard;Femme;24;Licence;6;Éducation;60453;CDD (Contrat à Durée Déterminée);1
+Thomas Lefebvre;Homme;22;Master;4;Construction;27756;Indépendant/Freelance;1
 Emma Richard;Homme;51;Master;19;Éducation;33163;Indépendant/Freelance;0
 Thomas Robert;Homme;31;Master;0;Construction;99902;CDD (Contrat à Durée Déterminée);1
-Lucas Bernard;Femme;25;Master;33;Finance;30411;CDI (Contrat à Durée Indéterminée);0
+Lucas Bernard;Femme;25;Master;7;Finance;30411;CDI (Contrat à Durée Indéterminée);0
 Lucas Richard;Femme;55;Licence;8;Éducation;33941;CDI (Contrat à Durée Indéterminée);1
-Jean Petit;Femme;25;Licence;11;Construction;28842;CDI (Contrat à Durée Indéterminée);0
+Jean Petit;Femme;25;Licence;7;Construction;28842;CDI (Contrat à Durée Indéterminée);0
 Alice Richard;Femme;56;Licence;1;Construction;74722;Indépendant/Freelance;1
 Alice Thomas;Femme;54;Licence;4;Finance;26779;Indépendant/Freelance;0
 Jean Martin;Femme;56;Licence;7;Finance;63238;CDI (Contrat à Durée Indéterminée);1
 Manon Robert;Femme;56;Licence;9;Finance;36804;CDD (Contrat à Durée Déterminée);0
 Hugo Thomas;Femme;64;Licence;20;Construction;36266;CDD (Contrat à Durée Déterminée);1
 Thomas Dubois;Homme;35;Master;1;Finance;32184;Indépendant/Freelance;0
-Jean Lefebvre;Femme;24;Licence;11;IT;58165;CDD (Contrat à Durée Déterminée);0
-Alice Richard;Femme;46;Master;38;Éducation;77082;CDD (Contrat à Durée Déterminée);1
-Alice Petit;Homme;35;Licence;29;Finance;98412;CDD (Contrat à Durée Déterminée);0
+Jean Lefebvre;Femme;24;Licence;6;IT;58165;CDD (Contrat à Durée Déterminée);0
+Alice Richard;Femme;46;Master;28;Éducation;77082;CDD (Contrat à Durée Déterminée);1
+Alice Petit;Homme;35;Licence;17;Finance;98412;CDD (Contrat à Durée Déterminée);0
 Sophie Moreau;Homme;56;Master;30;Santé;64393;Indépendant/Freelance;0
-Camille Richard;Homme;43;Licence;29;Santé;66740;CDI (Contrat à Durée Indéterminée);0
-Alice Martin;Femme;30;Master;25;Finance;75113;CDD (Contrat à Durée Déterminée);0
+Camille Richard;Homme;43;Licence;25;Santé;66740;CDI (Contrat à Durée Indéterminée);0
+Alice Martin;Femme;30;Master;12;Finance;75113;CDD (Contrat à Durée Déterminée);0
 Camille Lefebvre;Femme;36;Licence;11;IT;26362;Indépendant/Freelance;1
 Nathan Richard;Femme;63;Master;37;Santé;90219;CDD (Contrat à Durée Déterminée);0
-Emma Martin;Homme;31;Master;29;Éducation;98086;Indépendant/Freelance;1
+Emma Martin;Homme;31;Master;13;Éducation;98086;Indépendant/Freelance;1
 Alice Petit;Homme;43;Master;4;IT;86026;Indépendant/Freelance;1
-Sophie Lefebvre;Homme;32;Licence;27;Finance;38676;CDI (Contrat à Durée Indéterminée);1
+Sophie Lefebvre;Homme;32;Licence;14;Finance;38676;CDI (Contrat à Durée Indéterminée);1
 Thomas Durand;Homme;47;Master;4;IT;65458;Indépendant/Freelance;1
 Thomas Moreau;Homme;24;Master;6;Construction;25155;CDD (Contrat à Durée Déterminée);0
 Camille Petit;Femme;55;Licence;27;Construction;50263;Indépendant/Freelance;0
-Emma Moreau;Femme;20;Licence;38;Construction;84124;CDI (Contrat à Durée Indéterminée);1
+Emma Moreau;Femme;20;Licence;2;Construction;84124;CDI (Contrat à Durée Indéterminée);1
 Camille Thomas;Homme;36;Master;15;Construction;88664;CDI (Contrat à Durée Indéterminée);1
-Sophie Durand;Femme;22;Master;36;IT;42982;CDI (Contrat à Durée Indéterminée);0
+Sophie Durand;Femme;22;Master;4;IT;42982;CDI (Contrat à Durée Indéterminée);0
 Nathan Robert;Homme;51;Licence;1;IT;89135;Indépendant/Freelance;0
 Hugo Petit;Homme;57;Master;2;Construction;89903;CDI (Contrat à Durée Indéterminée);0
 Sophie Moreau;Homme;36;Licence;2;Santé;20369;CDD (Contrat à Durée Déterminée);1
 Hugo Lefebvre;Femme;31;Master;9;Santé;53296;CDI (Contrat à Durée Indéterminée);1
 Thomas Robert;Homme;60;Master;16;Éducation;84858;CDI (Contrat à Durée Indéterminée);1
 Thomas Durand;Homme;39;Licence;6;IT;27331;CDI (Contrat à Durée Indéterminée);1
-Sophie Durand;Homme;33;Licence;23;IT;61381;CDD (Contrat à Durée Déterminée);1
-Alice Thomas;Homme;51;Licence;36;Éducation;31860;CDD (Contrat à Durée Déterminée);1
+Sophie Durand;Homme;33;Licence;15;IT;61381;CDD (Contrat à Durée Déterminée);1
+Alice Thomas;Homme;51;Licence;33;Éducation;31860;CDD (Contrat à Durée Déterminée);1
 Sophie Durand;Femme;55;Master;1;Éducation;69357;CDD (Contrat à Durée Déterminée);0
 Lucas Robert;Homme;37;Master;17;Santé;79740;CDI (Contrat à Durée Indéterminée);1
 Jean Thomas;Femme;35;Master;2;Construction;24068;Indépendant/Freelance;1
 Nathan Thomas;Femme;45;Licence;10;Finance;91252;CDI (Contrat à Durée Indéterminée);1
 Camille Moreau;Femme;31;Licence;4;IT;81232;Indépendant/Freelance;0
-Manon Moreau;Homme;33;Master;35;Construction;74704;Indépendant/Freelance;0
+Manon Moreau;Homme;33;Master;15;Construction;74704;Indépendant/Freelance;0
 Alice Robert;Femme;24;Licence;2;Construction;95428;Indépendant/Freelance;0
 Lucas Richard;Femme;47;Licence;20;Finance;76374;CDD (Contrat à Durée Déterminée);0
-Thomas Moreau;Homme;36;Master;27;Santé;89449;CDD (Contrat à Durée Déterminée);0
-Lucas Martin;Homme;27;Licence;12;Construction;25506;Indépendant/Freelance;0
+Thomas Moreau;Homme;36;Master;18;Santé;89449;CDD (Contrat à Durée Déterminée);0
+Lucas Martin;Homme;27;Licence;9;Construction;25506;Indépendant/Freelance;0
 Lucas Petit;Homme;55;Master;1;Santé;87004;Indépendant/Freelance;1
 Alice Lefebvre;Homme;50;Licence;10;IT;87458;Indépendant/Freelance;0
-Hugo Martin;Homme;39;Licence;39;Construction;82296;CDD (Contrat à Durée Déterminée);1
+Hugo Martin;Homme;39;Licence;21;Construction;82296;CDD (Contrat à Durée Déterminée);1
 Jean Richard;Femme;62;Master;29;IT;88803;Indépendant/Freelance;0
-Lucas Richard;Homme;39;Licence;26;Construction;94458;CDI (Contrat à Durée Indéterminée);0
-Hugo Durand;Homme;37;Licence;31;Construction;22166;Indépendant/Freelance;1
+Lucas Richard;Homme;39;Licence;21;Construction;94458;CDI (Contrat à Durée Indéterminée);0
+Hugo Durand;Homme;37;Licence;19;Construction;22166;Indépendant/Freelance;1
 Emma Martin;Femme;55;Licence;20;IT;25163;Indépendant/Freelance;1
-Camille Thomas;Homme;24;Licence;11;Finance;96142;CDD (Contrat à Durée Déterminée);1
+Camille Thomas;Homme;24;Licence;6;Finance;96142;CDD (Contrat à Durée Déterminée);1
 Jean Durand;Femme;34;Master;6;IT;87253;CDD (Contrat à Durée Déterminée);1
 Alice Petit;Homme;47;Master;28;Éducation;61742;CDD (Contrat à Durée Déterminée);1
-Hugo Thomas;Femme;24;Master;8;IT;23623;CDI (Contrat à Durée Indéterminée);1
+Hugo Thomas;Femme;24;Master;6;IT;23623;CDI (Contrat à Durée Indéterminée);1
 Alice Dubois;Femme;26;Master;0;Finance;87136;Indépendant/Freelance;1
-Camille Dubois;Homme;33;Licence;36;IT;95505;CDI (Contrat à Durée Indéterminée);0
+Camille Dubois;Homme;33;Licence;15;IT;95505;CDI (Contrat à Durée Indéterminée);0
 Alice Martin;Femme;54;Licence;13;Construction;95423;Indépendant/Freelance;1
 Jean Martin;Homme;64;Master;38;Construction;56493;Indépendant/Freelance;0
-Jean Robert;Femme;23;Licence;35;IT;68572;Indépendant/Freelance;1
-Lucas Robert;Homme;24;Master;12;Construction;93783;CDD (Contrat à Durée Déterminée);0
+Jean Robert;Femme;23;Licence;5;IT;68572;Indépendant/Freelance;1
+Lucas Robert;Homme;24;Master;6;Construction;93783;CDD (Contrat à Durée Déterminée);0
 Hugo Robert;Femme;53;Licence;20;IT;29359;CDI (Contrat à Durée Indéterminée);1
-Sophie Durand;Femme;24;Master;37;Finance;46202;CDI (Contrat à Durée Indéterminée);0
+Sophie Durand;Femme;24;Master;6;Finance;46202;CDI (Contrat à Durée Indéterminée);0
 Hugo Robert;Homme;46;Licence;13;Éducation;77759;CDI (Contrat à Durée Indéterminée);0
-Thomas Thomas;Homme;36;Licence;34;Construction;98619;Indépendant/Freelance;0
-Manon Richard;Femme;23;Master;17;Santé;37933;Indépendant/Freelance;1
-Emma Robert;Femme;53;Licence;39;Finance;50353;Indépendant/Freelance;1
-Sophie Thomas;Homme;24;Licence;31;IT;75878;CDD (Contrat à Durée Déterminée);1
+Thomas Thomas;Homme;36;Licence;18;Construction;98619;Indépendant/Freelance;0
+Manon Richard;Femme;23;Master;5;Santé;37933;Indépendant/Freelance;1
+Emma Robert;Femme;53;Licence;35;Finance;50353;Indépendant/Freelance;1
+Sophie Thomas;Homme;24;Licence;6;IT;75878;CDD (Contrat à Durée Déterminée);1
 Jean Dubois;Femme;46;Master;9;Éducation;78477;CDD (Contrat à Durée Déterminée);0
 Jean Lefebvre;Femme;40;Licence;4;Finance;86060;CDI (Contrat à Durée Indéterminée);0
 Emma Martin;Femme;49;Licence;21;Finance;50397;Indépendant/Freelance;1
 Alice Bernard;Femme;64;Master;21;Éducation;86169;CDD (Contrat à Durée Déterminée);0
 Thomas Dubois;Homme;54;Master;30;Finance;29941;CDD (Contrat à Durée Déterminée);1
-Lucas Petit;Femme;30;Master;13;Construction;92741;Indépendant/Freelance;0
+Lucas Petit;Femme;30;Master;12;Construction;92741;Indépendant/Freelance;0
 Thomas Petit;Homme;48;Master;6;Éducation;71312;Indépendant/Freelance;0
 Sophie Bernard;Femme;61;Master;5;Éducation;99254;CDD (Contrat à Durée Déterminée);0
-Hugo Durand;Homme;18;Licence;7;Finance;98099;Indépendant/Freelance;0
+Hugo Durand;Homme;18;Licence;0;Finance;98099;Indépendant/Freelance;0
 Lucas Martin;Homme;39;Licence;14;Santé;61937;CDD (Contrat à Durée Déterminée);1
 Manon Bernard;Homme;54;Master;1;Finance;40485;CDI (Contrat à Durée Indéterminée);0
 Emma Bernard;Homme;43;Licence;9;Santé;33796;CDI (Contrat à Durée Indéterminée);0
 Thomas Moreau;Homme;48;Master;2;Finance;53720;CDD (Contrat à Durée Déterminée);1
-Hugo Petit;Femme;18;Master;4;Construction;97344;CDI (Contrat à Durée Indéterminée);1
+Hugo Petit;Femme;18;Master;0;Construction;97344;CDI (Contrat à Durée Indéterminée);1
 Nathan Bernard;Homme;42;Licence;8;IT;86840;Indépendant/Freelance;1
-Sophie Durand;Homme;33;Master;38;Construction;84646;CDI (Contrat à Durée Indéterminée);1
-Sophie Dubois;Homme;56;Master;39;Construction;35540;CDI (Contrat à Durée Indéterminée);0
+Sophie Durand;Homme;33;Master;15;Construction;84646;CDI (Contrat à Durée Indéterminée);1
+Sophie Dubois;Homme;56;Master;38;Construction;35540;CDI (Contrat à Durée Indéterminée);0
 Alice Petit;Femme;55;Licence;25;Éducation;91785;CDD (Contrat à Durée Déterminée);1
 Alice Durand;Homme;56;Licence;28;Éducation;45045;Indépendant/Freelance;0
-Nathan Petit;Homme;50;Master;38;Construction;33060;CDI (Contrat à Durée Indéterminée);1
+Nathan Petit;Homme;50;Master;32;Construction;33060;CDI (Contrat à Durée Indéterminée);1
 Sophie Richard;Femme;32;Master;0;Santé;55745;CDD (Contrat à Durée Déterminée);0
-Hugo Petit;Femme;18;Licence;35;Éducation;94669;CDD (Contrat à Durée Déterminée);1
+Hugo Petit;Femme;18;Licence;0;Éducation;94669;CDD (Contrat à Durée Déterminée);1
 Camille Moreau;Femme;60;Master;20;IT;43901;Indépendant/Freelance;1
 Nathan Martin;Femme;63;Master;11;IT;20553;Indépendant/Freelance;0
-Jean Bernard;Homme;28;Licence;26;Éducation;64775;CDD (Contrat à Durée Déterminée);1
-Lucas Dubois;Femme;47;Licence;37;Éducation;62300;CDD (Contrat à Durée Déterminée);1
-Thomas Lefebvre;Homme;19;Master;3;Santé;95858;CDD (Contrat à Durée Déterminée);1
+Jean Bernard;Homme;28;Licence;10;Éducation;64775;CDD (Contrat à Durée Déterminée);1
+Lucas Dubois;Femme;47;Licence;29;Éducation;62300;CDD (Contrat à Durée Déterminée);1
+Thomas Lefebvre;Homme;19;Master;1;Santé;95858;CDD (Contrat à Durée Déterminée);1
 Camille Richard;Femme;62;Licence;7;IT;84773;Indépendant/Freelance;1
 Alice Lefebvre;Femme;63;Licence;21;Finance;61683;Indépendant/Freelance;1
 Jean Robert;Femme;43;Master;6;Construction;73270;CDD (Contrat à Durée Déterminée);0
 Manon Robert;Homme;55;Licence;17;IT;39569;Indépendant/Freelance;1
-Hugo Petit;Homme;23;Licence;33;Éducation;53912;Indépendant/Freelance;1
+Hugo Petit;Homme;23;Licence;5;Éducation;53912;Indépendant/Freelance;1
 Nathan Lefebvre;Femme;64;Licence;10;Éducation;48904;Indépendant/Freelance;0
-Jean Moreau;Homme;35;Master;23;Construction;80337;CDI (Contrat à Durée Indéterminée);0
-Camille Petit;Femme;34;Master;31;Santé;77990;CDI (Contrat à Durée Indéterminée);0
-Alice Richard;Homme;26;Master;29;Finance;94690;CDD (Contrat à Durée Déterminée);1
+Jean Moreau;Homme;35;Master;17;Construction;80337;CDI (Contrat à Durée Indéterminée);0
+Camille Petit;Femme;34;Master;16;Santé;77990;CDI (Contrat à Durée Indéterminée);0
+Alice Richard;Homme;26;Master;8;Finance;94690;CDD (Contrat à Durée Déterminée);1
 Alice Bernard;Homme;44;Licence;23;Santé;20149;CDI (Contrat à Durée Indéterminée);1
 Emma Moreau;Homme;31;Master;12;Construction;56263;Indépendant/Freelance;1
-Sophie Dubois;Femme;36;Licence;38;Construction;50203;Indépendant/Freelance;1
-Thomas Robert;Homme;40;Licence;28;IT;69711;Indépendant/Freelance;0
-Camille Lefebvre;Homme;19;Master;15;Construction;63690;CDD (Contrat à Durée Déterminée);0
-Jean Richard;Homme;35;Master;22;Santé;55219;Indépendant/Freelance;0
+Sophie Dubois;Femme;36;Licence;18;Construction;50203;Indépendant/Freelance;1
+Thomas Robert;Homme;40;Licence;22;IT;69711;Indépendant/Freelance;0
+Camille Lefebvre;Homme;19;Master;1;Construction;63690;CDD (Contrat à Durée Déterminée);0
+Jean Richard;Homme;35;Master;17;Santé;55219;Indépendant/Freelance;0
 Nathan Richard;Homme;59;Licence;27;Santé;38119;Indépendant/Freelance;0
 Emma Bernard;Homme;62;Licence;5;Éducation;50378;CDD (Contrat à Durée Déterminée);0
-Hugo Thomas;Femme;27;Master;35;IT;86343;CDI (Contrat à Durée Indéterminée);0
-Lucas Durand;Homme;19;Licence;22;Finance;37076;CDI (Contrat à Durée Indéterminée);0
-Manon Thomas;Femme;22;Licence;33;Santé;29946;CDI (Contrat à Durée Indéterminée);0
-Lucas Dubois;Homme;21;Licence;32;Construction;50817;CDI (Contrat à Durée Indéterminée);0
+Hugo Thomas;Femme;27;Master;9;IT;86343;CDI (Contrat à Durée Indéterminée);0
+Lucas Durand;Homme;19;Licence;1;Finance;37076;CDI (Contrat à Durée Indéterminée);0
+Manon Thomas;Femme;22;Licence;4;Santé;29946;CDI (Contrat à Durée Indéterminée);0
+Lucas Dubois;Homme;21;Licence;3;Construction;50817;CDI (Contrat à Durée Indéterminée);0
 Emma Bernard;Femme;37;Master;3;Santé;36624;Indépendant/Freelance;0
 Alice Martin;Homme;58;Licence;32;Santé;27348;CDI (Contrat à Durée Indéterminée);1
 Lucas Richard;Femme;44;Licence;26;Éducation;96316;CDD (Contrat à Durée Déterminée);0
@@ -205,44 +205,44 @@ Emma Moreau;Femme;55;Master;6;Finance;80824;CDI (Contrat à Durée Indéterminé
 Camille Richard;Femme;45;Master;14;Éducation;23056;CDI (Contrat à Durée Indéterminée);0
 Emma Petit;Homme;36;Master;3;Finance;43989;Indépendant/Freelance;1
 Jean Durand;Homme;53;Master;1;Éducation;51250;Indépendant/Freelance;1
-Manon Durand;Homme;26;Licence;14;Finance;59940;Indépendant/Freelance;1
-Manon Durand;Homme;18;Master;30;Éducation;57562;CDD (Contrat à Durée Déterminée);1
-Jean Martin;Femme;34;Master;21;IT;94476;CDI (Contrat à Durée Indéterminée);0
+Manon Durand;Homme;26;Licence;8;Finance;59940;Indépendant/Freelance;1
+Manon Durand;Homme;18;Master;0;Éducation;57562;CDD (Contrat à Durée Déterminée);1
+Jean Martin;Femme;34;Master;16;IT;94476;CDI (Contrat à Durée Indéterminée);0
 Hugo Bernard;Homme;51;Master;25;IT;94677;CDI (Contrat à Durée Indéterminée);1
 Nathan Bernard;Femme;32;Licence;13;IT;88351;Indépendant/Freelance;0
-Lucas Petit;Femme;40;Licence;36;Santé;24654;CDD (Contrat à Durée Déterminée);0
-Emma Robert;Homme;33;Master;18;IT;75927;CDD (Contrat à Durée Déterminée);0
-Sophie Richard;Femme;41;Licence;24;Construction;92522;Indépendant/Freelance;1
+Lucas Petit;Femme;40;Licence;22;Santé;24654;CDD (Contrat à Durée Déterminée);0
+Emma Robert;Homme;33;Master;15;IT;75927;CDD (Contrat à Durée Déterminée);0
+Sophie Richard;Femme;41;Licence;23;Construction;92522;Indépendant/Freelance;1
 Nathan Petit;Homme;40;Master;3;Construction;76880;Indépendant/Freelance;0
 Camille Martin;Homme;33;Licence;13;Construction;82592;CDD (Contrat à Durée Déterminée);1
 Jean Richard;Homme;63;Licence;17;Santé;34277;CDI (Contrat à Durée Indéterminée);0
 Jean Robert;Homme;38;Licence;11;Construction;74462;Indépendant/Freelance;1
 Sophie Martin;Femme;50;Master;5;Santé;52687;CDD (Contrat à Durée Déterminée);0
-Nathan Moreau;Homme;48;Licence;31;Éducation;97446;CDI (Contrat à Durée Indéterminée);0
+Nathan Moreau;Homme;48;Licence;30;Éducation;97446;CDI (Contrat à Durée Indéterminée);0
 Jean Robert;Homme;58;Licence;37;Santé;44168;Indépendant/Freelance;0
 Camille Moreau;Femme;59;Master;4;Finance;63738;Indépendant/Freelance;1
 Thomas Thomas;Femme;64;Licence;29;Finance;55023;CDI (Contrat à Durée Indéterminée);1
-Emma Durand;Homme;25;Master;20;Éducation;53407;CDI (Contrat à Durée Indéterminée);0
-Sophie Bernard;Femme;30;Master;33;Construction;60991;CDD (Contrat à Durée Déterminée);1
+Emma Durand;Homme;25;Master;7;Éducation;53407;CDI (Contrat à Durée Indéterminée);0
+Sophie Bernard;Femme;30;Master;12;Construction;60991;CDD (Contrat à Durée Déterminée);1
 Alice Thomas;Femme;34;Licence;6;Éducation;58383;CDD (Contrat à Durée Déterminée);0
 Nathan Petit;Femme;37;Licence;8;Santé;44188;CDI (Contrat à Durée Indéterminée);0
 Alice Bernard;Homme;36;Master;10;Finance;32902;CDD (Contrat à Durée Déterminée);0
 Emma Moreau;Femme;56;Licence;6;IT;86667;CDD (Contrat à Durée Déterminée);1
 Alice Robert;Homme;48;Master;10;Santé;38497;CDD (Contrat à Durée Déterminée);1
-Alice Durand;Homme;21;Master;36;Finance;40301;CDI (Contrat à Durée Indéterminée);1
+Alice Durand;Homme;21;Master;3;Finance;40301;CDI (Contrat à Durée Indéterminée);1
 Emma Lefebvre;Homme;59;Licence;11;Éducation;69633;Indépendant/Freelance;0
 Lucas Thomas;Homme;62;Master;34;Finance;32710;CDD (Contrat à Durée Déterminée);0
 Nathan Moreau;Femme;58;Master;22;Finance;59036;CDD (Contrat à Durée Déterminée);1
 Hugo Dubois;Homme;48;Licence;23;Finance;28745;CDI (Contrat à Durée Indéterminée);0
 Thomas Petit;Femme;38;Master;2;Finance;95011;Indépendant/Freelance;0
 Hugo Moreau;Homme;42;Master;24;Éducation;99978;CDD (Contrat à Durée Déterminée);0
-Lucas Dubois;Femme;26;Master;13;Construction;58240;CDI (Contrat à Durée Indéterminée);0
-Nathan Thomas;Femme;24;Master;8;Santé;86819;Indépendant/Freelance;0
+Lucas Dubois;Femme;26;Master;8;Construction;58240;CDI (Contrat à Durée Indéterminée);0
+Nathan Thomas;Femme;24;Master;6;Santé;86819;Indépendant/Freelance;0
 Nathan Richard;Femme;36;Licence;17;Finance;58082;Indépendant/Freelance;1
-Lucas Moreau;Homme;38;Licence;26;IT;95841;CDI (Contrat à Durée Indéterminée);0
+Lucas Moreau;Homme;38;Licence;20;IT;95841;CDI (Contrat à Durée Indéterminée);0
 Thomas Robert;Femme;57;Master;31;Éducation;72902;Indépendant/Freelance;0
 Thomas Lefebvre;Homme;39;Master;21;Construction;20883;CDI (Contrat à Durée Indéterminée);0
-Emma Bernard;Homme;37;Licence;36;Construction;95241;CDD (Contrat à Durée Déterminée);0
-Alice Durand;Homme;21;Licence;27;IT;79346;CDD (Contrat à Durée Déterminée);0
+Emma Bernard;Homme;37;Licence;19;Construction;95241;CDD (Contrat à Durée Déterminée);0
+Alice Durand;Homme;21;Licence;3;IT;79346;CDD (Contrat à Durée Déterminée);0
 Alice Petit;Homme;55;Master;21;Construction;29971;CDI (Contrat à Durée Indéterminée);0
 Nathan Thomas;Homme;57;Master;24;IT;27517;Indépendant/Freelance;1
