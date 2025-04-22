@@ -23,7 +23,7 @@
         <nav class="nav-buttons">
             <a href="{% url 'predict' %}" class="btn">🧠 Prédiction</a>
             <a href="{% url 'visualisation' %}" class="btn">📊 Visualisation</a>
-            <a href="mailto:support@emploiapp.com" class="btn">📩 Contact</a>
+            <a href="mailto:rajaotianar@gmail.com" class="btn">📩 Contact</a>
             <a href="{% url 'logout' %}" class="btn logout-btn">Se déconnecter</a>
         </nav>
 
@@ -33,12 +33,59 @@
             <p>Ce site vous permet de prédire votre statut d'emploi selon votre profil personnel et académique, et de visualiser les tendances du marché.</p>
         </section>
 
+        <!-- Section Statistiques -->
+        <section class="about-section">
+            <h2>📈 Statistiques</h2>
+            <div class="stats-cards" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+                <div class="stat-card" style="text-align: center;">
+                    <h3>51.82%</h3>
+                    <p>Taux de réussite</p>
+                </div>
+                <div class="stat-card" style="text-align: center;">
+                    <h3>247</h3>
+                    <p>Étudiants analysés</p>
+                </div>
+                <div class="stat-card" style="text-align: center;">
+                    <h3>7</h3>
+                    <p>Critères mesurés</p>
+                </div>
+                <div class="stat-card" style="text-align: center;">
+                    <h3>50.2%</h3>
+                    <p>Étudiants avec Licence</p>
+                </div>
+                <div class="stat-card" style="text-align: center;">
+                    <h3>49.8%</h3>
+                    <p>Étudiants avec Master</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide de navigation -->
+        <section class="about-section">
+            <h2>🧭 Guide d'utilisation</h2>
+            <ol>
+                <li>Connectez-vous ou créez un compte.</li>
+                <li>Utilisez l’onglet <strong>Visualisation</strong> pour explorer les statistiques des anciens étudiants.</li>
+                <li>Rendez-vous sur <strong>Prédiction</strong> pour connaître votre statut d'emploi estimé selon vos informations.</li>
+                <li>Cliquez sur <strong>Contact</strong> pour contacter l'administrateur.</li>
+                <li>Consultez les conseils pour optimiser vos chances d'insertion professionnelle.</li>
+                <li>Consultez les statistiques et la description sur le dataset utiliser pour plus de comprehension.</li>
+                <li>Cliquez sur <strong>Se déconnecter</strong> pour se déconnecter du site web(à recommander à chaque fois que vous quitter le site web).</li>
+            </ol>
+        </section>
+
         <!-- Astuce aléatoire -->
         <section class="tip-section">
             <h3>Astuce du jour 💡</h3>
             <p id="tip" class="tip"></p>
         </section>
     </div>
+
+    <!-- Footer lien SupMTI et GitHub -->
+    <footer style="text-align: center; margin-top: 30px; font-size: 0.95em;">
+        <p>Besoin d'informations sur l'établissement? Visitez le site officiel de <a href="https://supmti.ac.ma/" target="_blank" style="color: #007bff; text-decoration: underline;">SupMTI</a></p>
+        <p>Code source sur <a href="https://github.com/Rinoh16/App_prediction" target="_blank" style="color: #28a745; text-decoration: underline;">mon GitHub</a></p>
+    </footer>
 
     <script>
         function updateDateTime() {
