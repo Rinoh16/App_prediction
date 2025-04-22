@@ -9,6 +9,8 @@ from django.contrib.auth.hashers import check_password, make_password
 import pandas as pd
 import numpy as np
 from .utils import login_required_session
+from .forms import LoginForm, PredictionForm, RegisterForm, UserUpdateForm
+
 
 
 # Login view
@@ -169,3 +171,60 @@ def visualisation(request):
         'img_data': img_data,
         'graph_type': graph_type
     })
+
+from django.shortcuts import render, redirect
+from .forms import UserUpdateForm, CustomPasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
+from django.contrib import messages
+from .models import Person
+@login_required_session
+def update_profile(request):
+    user_data = request.session.get('user')
+    if not user_data:
+        return redirect('login')
+    
+    try:
+        user = Person.objects.get(email=user_data['email'])
+    except Person.DoesNotExist:
+        return redirect('login')
+
+    if request.method == 'POST':
+        form = UserUpdateForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            # Mettre à jour les données de session après modification
+            request.session['user'] = {
+                'email': user.email,
+                'nom': user.nom,
+                'prenom': user.prenom,
+            }
+            messages.success(request, "Votre profil a été mis à jour !")
+            return redirect('update_profile')
+    else:
+        form = UserUpdateForm(instance=user)
+
+    return render(request, 'prediction/update_profile.html', {'form': form})
+
+@login_required_session
+def change_password(request):
+    if request.method == 'POST':
+        form = CustomPasswordChangeForm(request.POST)
+        if form.is_valid():
+            email = request.session.get('user', {}).get('email')
+            try:
+                user = Person.objects.get(email=email)
+            except Person.DoesNotExist:
+                messages.error(request, "Utilisateur introuvable.")
+                return redirect('login')
+
+            if check_password(form.cleaned_data['old_password'], user.mot_de_passe):
+                user.mot_de_passe = make_password(form.cleaned_data['new_password1'])
+                user.save()
+                messages.success(request, "Votre mot de passe a été changé avec succès !")
+                return redirect('login')
+            else:
+                form.add_error('old_password', 'Ancien mot de passe incorrect')
+    else:
+        form = CustomPasswordChangeForm()
+
+    return render(request, 'prediction/change_password.html', {'form': form})

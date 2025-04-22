@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="{% static 'prediction/css/user_profile.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mon Profil</h1>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="error">{{ field.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit">Mettre à jour</button>
+        </form>
+
+        <!-- Groupe de boutons -->
+        <div class="button-group">
+            <a href="{% url 'change_password' %}" class="button-link secondary-button">Modifier le mot de passe</a>
+            <a href="{% url 'home' %}" class="button-link return-link">Retour à l'accueil</a>
+        </div>
+    </div>
+</body>
+</html>

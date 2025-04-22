@@ -56,3 +56,29 @@ class RegisterForm(forms.ModelForm):
         if commit:
             user.save()
         return user
+from django import forms
+from django.contrib.auth.hashers import make_password
+from .models import Person
+
+# Formulaire pour mettre à jour les informations personnelles
+from django import forms
+from django.contrib.auth.hashers import make_password
+from .models import Person
+
+class UserUpdateForm(forms.ModelForm):
+
+    class Meta:
+        model = Person
+        fields = ['nom', 'prenom', 'email']
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        # Si un mot de passe est fourni, il sera haché et mis à jour
+        if commit:
+            user.save()
+        return user
+
+class CustomPasswordChangeForm(forms.Form):
+    old_password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Ancien mot de passe'}))
+    new_password1 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Nouveau mot de passe'}))
+    new_password2 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Confirmer nouveau mot de passe'}))

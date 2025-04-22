@@ -5,7 +5,7 @@ class Person(models.Model):
     email = models.EmailField(unique=True)
     nom = models.CharField(max_length=255)
     prenom = models.CharField(max_length=255)
-    mot_de_passe = models.CharField(max_length=128, default='test123')
+    mot_de_passe = models.CharField(max_length=128, default='test123', null=True, blank=True)
 
 
     def __str__(self):
