@@ -9,17 +9,30 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    animation: fadeInBody 1.5s ease-in-out;
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .login-form {
     background: white;
     padding: 40px 50px;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 400px;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(20px); /* Pour une transition fluide */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 .form-header {
@@ -30,20 +43,21 @@ body {
 }
 
 .logo-wrapper {
-    width: 100px;  /* Ajuste la taille du logo */
+    width: 100px;
     height: auto;
-    margin-bottom: 20px; /* Marge entre l'image et le formulaire */
+    margin-bottom: 20px;
 }
 
 .logo {
     width: 100%;
     height: auto;
-    object-fit: contain; /* Assure que l'image est visible dans son entiereté */
+    object-fit: contain;
 }
 
 .login-form p {
     text-align: left;
     margin-bottom: 18px;
+    color: #444;
 }
 
 .login-form label {
@@ -56,17 +70,19 @@ body {
 .login-form input[type="text"],
 .login-form input[type="password"] {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 12px;
+    font-size: 15px;
     transition: all 0.3s ease;
 }
 
 .login-form input[type="text"]:focus,
 .login-form input[type="password"]:focus {
     border-color: #007BFF;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
     outline: none;
+    background-color: #f8faff;
 }
 
 .form-actions {
@@ -74,34 +90,69 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .submit-btn {
     background-color: #007BFF;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 10px;
+    padding: 12px 24px;
+    border-radius: 12px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .submit-btn:hover {
     background-color: #0056b3;
+    transform: scale(1.03);
 }
 
 .register-link {
     color: #007BFF;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .register-link:hover {
+    color: #0056b3;
     text-decoration: underline;
 }
-/* Élargir légèrement le champ email */
+
+/* Optionnel : pour que le champ email ne dépasse pas trop */
 .email-input {
-    width: 102%;
+    width: 100%;
 }
 
+/* Responsive pour petits écrans */
+@media (max-width: 500px) {
+    /* Ajouter un peu de marge et de padding pour éviter que le contenu touche les bords de l'écran */
+    body {
+        padding: 10px;
+    }
+
+    .login-form {
+        padding: 30px 25px;
+        /* Réduire un peu la taille des champs de texte pour les petits écrans */
+        max-width: 95%;
+    }
+
+    .submit-btn {
+        width: 100%; /* Assurez-vous que le bouton s'adapte entièrement */
+        padding: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px; /* Plus d'espace entre les éléments pour éviter l'encombrement */
+    }
+
+    .register-link {
+        font-size: 14px; /* Réduire la taille de la police des liens sur mobile */
+    }
+}

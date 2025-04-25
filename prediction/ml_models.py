@@ -1,8 +1,7 @@
-# prediction/ml_models.py
-
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
 import pickle
 
 # Charger les données
@@ -33,10 +32,13 @@ X_scaled = scaler.fit_transform(X)
 with open("scaler.sav", "wb") as f:
     pickle.dump(scaler, f)
 
-# Entraînement du modèle
-model = RandomForestClassifier(random_state=42)
-model.fit(X_scaled, y)
+# Séparation train / test (80% / 20%)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Sauvegarder le modèle
+# Entraînement du modèle sur le training set
+model = RandomForestClassifier(random_state=42)
+model.fit(X_train, y_train)
+
+# Sauvegarder le modèle entraîné
 with open("ml_model.sav", "wb") as f:
     pickle.dump(model, f)

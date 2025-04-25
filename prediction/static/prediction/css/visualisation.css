@@ -1,52 +1,120 @@
+/* visualisation.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f2f2f2, #e8edf3);
     padding: 20px;
+    margin: 0;
 }
 
+/* Conteneur principal */
 .visualisation-container {
-    max-width: 900px;
-    margin: auto;
+    max-width: 1000px;
+    margin: 40px auto;
     background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
 }
 
+/* Animation d'entrée */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Sélection de graphes */
 .graph-selection {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.graph-selection .btn {
-    padding: 10px 15px;
+/* Boutons */
+.graph-selection .btn,
+.back-home .btn {
+    padding: 12px 20px;
     background-color: #3498db;
     color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-.graph-selection .btn:hover {
+.graph-selection .btn:hover,
+.back-home .btn:hover {
     background-color: #2980b9;
+    transform: scale(1.05);
 }
 
+/* Conteneur du graphe */
 .graph-container {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .graph-container img {
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
+.graph-container img:hover {
+    transform: scale(1.01);
+}
+
+/* Bouton retour */
 .back-home {
     text-align: center;
+    margin-top: 20px;
 }
 
 .back-home .btn {
-    background-color: white;
+    background-color: #ffffff;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.back-home .btn:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Réduit l'espace autour du body */
+    }
+
+    .visualisation-container {
+        padding: 20px;
+        max-width: 100%; /* Assurez-vous que le conteneur s'adapte correctement */
+        margin: 20px 0; /* Réduit la marge */
+    }
+
+    .graph-selection {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Réduit l'espace entre les éléments */
+    }
+
+    .graph-selection .btn,
+    .back-home .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px; /* Ajuste le padding pour les petits écrans */
+    }
+
+    .graph-container img {
+        max-width: 95%; /* Limite la taille des images pour les petits écrans */
+        margin: 0 auto; /* Centrer les images */
+    }
 }

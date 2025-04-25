@@ -12,6 +12,14 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 20px;
+    opacity: 0;
+    animation: fadeInBody 1s ease forwards;
+}
+
+@keyframes fadeInBody {
+    to {
+        opacity: 1;
+    }
 }
 
 /* Container for the profile form */
@@ -22,6 +30,16 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInContainer 1s ease 0.5s forwards;
+}
+
+@keyframes fadeInContainer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Title styling */
@@ -30,11 +48,27 @@ h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #4CAF50;
+    opacity: 0;
+    animation: fadeInText 1s ease 1s forwards;
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
 }
 
 /* Form and field group styling */
 .form-group {
     margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInFields 1s ease 1.5s forwards;
+}
+
+@keyframes fadeInFields {
+    to {
+        opacity: 1;
+    }
 }
 
 .form-group label {
@@ -50,6 +84,7 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s;
 }
 
 .form-group input:focus {
@@ -73,11 +108,20 @@ button {
     border-radius: 5px;
     width: 100%;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    opacity: 0;
+    animation: fadeInButton 1s ease 2s forwards;
+}
+
+@keyframes fadeInButton {
+    to {
+        opacity: 1;
+    }
 }
 
 button:hover {
     background-color: #45a049;
+    transform: scale(1.05);
 }
 
 /* Link to change password */
@@ -93,12 +137,21 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
 /* Style commun aux liens comme des boutons */
 .button-group {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    opacity: 0;
+    animation: fadeInButtonGroup 1s ease 2.5s forwards;
+}
+
+@keyframes fadeInButtonGroup {
+    to {
+        opacity: 1;
+    }
 }
 
 /* Style bouton vert principal */
@@ -143,4 +196,3 @@ a:hover {
     background-color: transparent;
     text-decoration: none;
 }
-

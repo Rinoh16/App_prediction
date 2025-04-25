@@ -11,29 +11,36 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    animation: fadeInBody 1.5s ease-in-out;
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Formulaire d'inscription */
 .login-form {
     background-color: white;
     padding: 40px 50px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     width: 100%;
     max-width: 400px;
     animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Animation du formulaire */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-/* Header du formulaire (contenant le logo) */
+/* Header du formulaire */
 .form-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* Conteneur du logo */
@@ -43,19 +50,21 @@ body {
 }
 
 .logo {
-    width: 150px; /* Ajuste cette taille selon tes besoins */
+    width: 120px;
     height: auto;
     object-fit: contain;
 }
 
-/* Espacement entre les éléments du formulaire */
+/* Espacement entre les éléments */
 .login-form p {
     margin-bottom: 15px;
+    color: #444;
 }
 
+/* Libellés */
 .login-form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: bold;
     color: #333;
 }
@@ -65,46 +74,63 @@ body {
 .login-form input[type="password"],
 .login-form input[type="email"] {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    transition: border-color 0.3s;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
-.login-form input[type="text"]:focus,
-.login-form input[type="password"]:focus,
-.login-form input[type="email"]:focus {
+.login-form input:focus {
     border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
     outline: none;
+    background-color: #f8faff;
 }
 
-/* Boutons */
+/* Bouton de soumission */
 .submit-btn {
     background-color: #007BFF;
     color: white;
     border: none;
-    padding: 12px 18px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 15px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .submit-btn:hover {
     background-color: #0056b3;
+    transform: scale(1.03);
 }
 
-/* Lien pour la connexion */
+/* Lien vers la page de connexion */
 .register-link {
     color: #007BFF;
     text-decoration: none;
     font-weight: bold;
-    display: block;
     text-align: center;
+    display: block;
     margin-top: 20px;
+    transition: color 0.3s ease;
 }
 
 .register-link:hover {
+    color: #0056b3;
     text-decoration: underline;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 500px) {
+    .login-form {
+        padding: 30px 25px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+    }
 }
