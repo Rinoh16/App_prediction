@@ -19,15 +19,13 @@ body {
 
 .login-form {
     background: white;
-    padding: 40px 50px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 30px 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    transform: translateY(20px); /* Pour une transition fluide */
 }
 
 @keyframes fadeIn {
@@ -37,15 +35,14 @@ body {
 
 .form-header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 25px;
 }
 
 .logo-wrapper {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
+    width: 90px;
+    margin-bottom: 15px;
 }
 
 .logo {
@@ -54,9 +51,22 @@ body {
     object-fit: contain;
 }
 
+.welcome-message,
+.sub-message {
+    text-align: center;
+    margin: 0;
+}
+
+.sub-message {
+    font-size: 16px;
+    color: #666;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
 .login-form p {
     text-align: left;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     color: #444;
 }
 
@@ -68,41 +78,66 @@ body {
 }
 
 .login-form input[type="text"],
-.login-form input[type="password"] {
+.login-form input[type="password"],
+.login-form input[type="email"] {
     width: 100%;
-    padding: 14px;
+    padding: 14px 12px;
     border: 1px solid #ccc;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 15px;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
-.login-form input[type="text"]:focus,
-.login-form input[type="password"]:focus {
+.login-form input:focus {
     border-color: #007BFF;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
     outline: none;
     background-color: #f8faff;
 }
 
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input {
+    padding-right: 42px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+    color: #007BFF;
+}
+
 .form-actions {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-top: 25px;
-    flex-wrap: wrap;
-    gap: 10px;
+    margin-top: 20px;
+    gap: 12px;
 }
 
 .submit-btn {
     background-color: #007BFF;
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 12px;
+    padding: 12px 20px;
+    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
+    width: 100%;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -115,6 +150,7 @@ body {
     color: #007BFF;
     text-decoration: none;
     font-weight: 600;
+    font-size: 14px;
     transition: color 0.3s ease;
 }
 
@@ -123,36 +159,22 @@ body {
     text-decoration: underline;
 }
 
-/* Optionnel : pour que le champ email ne dépasse pas trop */
-.email-input {
-    width: 100%;
-}
-
-/* Responsive pour petits écrans */
+/* Responsive */
 @media (max-width: 500px) {
-    /* Ajouter un peu de marge et de padding pour éviter que le contenu touche les bords de l'écran */
     body {
         padding: 10px;
     }
 
     .login-form {
-        padding: 30px 25px;
-        /* Réduire un peu la taille des champs de texte pour les petits écrans */
+        padding: 25px 20px;
         max-width: 95%;
     }
 
     .submit-btn {
-        width: 100%; /* Assurez-vous que le bouton s'adapte entièrement */
         padding: 12px;
     }
 
     .form-actions {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 15px; /* Plus d'espace entre les éléments pour éviter l'encombrement */
-    }
-
-    .register-link {
-        font-size: 14px; /* Réduire la taille de la police des liens sur mobile */
+        gap: 12px;
     }
 }

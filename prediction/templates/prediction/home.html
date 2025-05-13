@@ -1,14 +1,31 @@
-{% load static %}
+{% load static %} 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Tableau de bord</title>
     <link rel="stylesheet" href="{% static 'prediction/css/home.css' %}">
+    <link rel="icon" href="{% static 'prediction/img/favicon.png' %}" type="image/x-icon">
 </head>
 <body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="{% static 'prediction/img/logo_supmti.png' %}" alt="Logo" class="nav-logo">
+            <span class="nav-title">SupMTI Dashboard</span>
+        </div>
+        <ul class="nav-links">
+            <!-- Accueil avant Prédiction -->
+            <li><a href="{% url 'home' %}" class="{% if request.path == '/home/' %}active{% endif %}">🏠 Accueil</a></li>
+            <li><a href="{% url 'predict' %}" class="{% if request.path == '/predict/' %}active{% endif %}">🧠 Prédiction</a></li>
+            <li><a href="{% url 'visualisation' %}" class="{% if request.path == '/visualisation/' %}active{% endif %}">📊 Visualisation</a></li>
+            <li><a href="mailto:rajaotianar@gmail.com">📩 Contact</a></li>
+            <li><a href="{% url 'update_profile' %}">👤 Mon Profil</a></li>
+            <li><a href="{% url 'logout' %}" class="logout-link">Se déconnecter</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <!-- Logo -->
         <header>
             <div class="logo-container">
                 <img src="{% static 'prediction/img/logo_supmti.png' %}" alt="Logo" class="logo">
@@ -18,15 +35,6 @@
                 <span id="date"></span> | <span id="time"></span>
             </p>
         </header>
-
-        <!-- Navigation -->
-        <nav class="nav-buttons">
-            <a href="{% url 'predict' %}" class="btn">🧠 Prédiction</a>
-            <a href="{% url 'visualisation' %}" class="btn">📊 Visualisation</a>
-            <a href="mailto:rajaotianar@gmail.com" class="btn">📩 Contact</a>
-            <a href="{% url 'update_profile' %}" class="btn">👤 Mon Profil</a>
-            <a href="{% url 'logout' %}" class="btn logout-btn">Se déconnecter</a>
-        </nav>
 
         <!-- À propos -->
         <section class="about-section">
@@ -50,15 +58,15 @@
                 <div class="stat-card"><h3>49.8%</h3><p>Master</p></div>
             </div>
 
-            <!-- Bouton Voir plus -->
+            <!-- Voir plus -->
             <div style="text-align:center; margin: 20px 0;">
-                <button onclick="toggleStats()" class="btn">📋 Voir plus</button>
+                <button id="toggleButton" onclick="toggleStats()" class="btn">📋 Voir plus</button>
             </div>
 
-            <!-- Statistiques détaillées -->
-            <div id="more-stats" style="display: none; padding: 20px; border: 1px solid #ccc; background-color: #f9f9f9;">
+            <!-- Détails statistiques -->
+            <div id="more-stats" style="display: none;">
                 <h3>📊 Détails des statistiques</h3>
-                <ul style="text-align: left; line-height: 1.8;">
+                <ul>
                     <li><strong>Total :</strong> 247 étudiants</li>
                     <li><strong>Sexe :</strong> 133 hommes, 114 femmes</li>
                     <li><strong>Niveau :</strong> 124 Licence, 123 Master</li>
@@ -68,7 +76,7 @@
                     <li><strong>Âge moyen :</strong> 41.5 ans (min: 22, max: 64)</li>
                     <li><strong>Expérience :</strong> Moyenne de 13.5 ans (0–39 ans)</li>
                     <li><strong>Salaire espéré :</strong> Moyenne de 44 165 MAD</li>
-                    <li><strong>Performance du modèle (Random Forest) :</strong> Accuracy = 0.98, Précision = 0.98, Rappel = 0.98</li>
+                    <li><strong>Performance :</strong> Accuracy = 0.98, Précision = 0.98, Rappel = 0.98</li>
                 </ul>
             </div>
         </section>
@@ -78,16 +86,14 @@
             <h2>🧭 Guide d'utilisation</h2>
             <ol>
                 <li>Connectez-vous ou créez un compte.</li>
-                <li>Utilisez <strong>Visualisation</strong> pour explorer les statistiques.</li>
-                <li>Utilisez <strong>Prédiction</strong> pour estimer votre statut d'emploi.</li>
-                <li>Cliquez sur <strong>Contact</strong> pour contacter l'administrateur.</li>
-                <li>Consultez les conseils pour optimiser vos chances.</li>
-                <li>Cliquez sur <strong>Mon profil</strong> pour modifier vos infos.</li>
-                <li>Utilisez <strong>Se déconnecter</strong> pour quitter.</li>
+                <li>Explorez les <strong>statistiques</strong>.</li>
+                <li>Utilisez la <strong>prédiction</strong> selon votre profil.</li>
+                <li>Contactez l'administrateur si besoin.</li>
+                <li>Consultez les conseils et ajustez votre profil.</li>
             </ol>
         </section>
 
-        <!-- Astuce du jour -->
+        <!-- Astuce -->
         <section class="tip-section">
             <h3>Astuce du jour 💡</h3>
             <p id="tip" class="tip"></p>
@@ -95,8 +101,8 @@
     </div>
 
     <!-- Footer -->
-    <footer style="text-align: center; margin-top: 30px; font-size: 0.95em;">
-        <p>Plus d’infos sur 
+    <footer>
+        <p>© 2025 - Plus d’infos sur 
             <a href="https://supmti.ac.ma/" target="_blank">SupMTI</a>
         </p>
         <p>Code source sur 
@@ -104,7 +110,6 @@
         </p>
     </footer>
 
-    <!-- Scripts -->
     <script>
         function updateDateTime() {
             const now = new Date();
@@ -125,7 +130,10 @@
 
         function toggleStats() {
             const statBlock = document.getElementById("more-stats");
-            statBlock.style.display = statBlock.style.display === "none" ? "block" : "none";
+            const toggleButton = document.getElementById("toggleButton");
+            const isVisible = statBlock.style.display === "block";
+            statBlock.style.display = isVisible ? "none" : "block";
+            toggleButton.textContent = isVisible ? "📋 Voir plus" : "🔽 Voir moins";
         }
     </script>
 </body>

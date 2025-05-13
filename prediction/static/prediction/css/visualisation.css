@@ -1,15 +1,35 @@
 /* visualisation.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+:root {
+  /* Palette de couleurs neutres et accents vifs */
+  --primary: #5C6AC4;
+  --primary-light: #7F8FF0;
+  --accent: #F59E0B;
+  --danger: #EF4444;
+  --danger-hover: #DC2626;
+  --bg: #F3F4F6;
+  --surface: #FFFFFF;
+  --glass: rgba(255, 255, 255, 0.7);
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --shadow-light: rgba(0, 0, 0, 0.04);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to right, #f2f2f2, #e8edf3);
-    padding: 20px;
+    padding: 0;
     margin: 0;
 }
 
 /* Conteneur principal */
 .visualisation-container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 40px auto;
     background: white;
     padding: 30px 40px;
@@ -23,6 +43,81 @@ body {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Navbar dans visualisation.css */
+/* --- Barre de navigation --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo {
+  height: 40px;
+  border-radius: 0.5rem;
+}
+
+.nav-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: var(--primary-light);
+}
+
+.nav-links a.active {
+  background-color: #007BFF;
+  color: white;
+}
+
+.logout-link {
+  background: var(--danger);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.logout-link:hover {
+  background: var(--danger-hover);
+}
+
+
 
 /* Sélection de graphes */
 .graph-selection {

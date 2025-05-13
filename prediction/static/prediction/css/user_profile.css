@@ -1,198 +1,243 @@
-/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* === Variables CSS === */
+:root {
+  --primary: #5C6AC4;
+  --primary-light: #7F8FF0;
+  --accent: #F59E0B;
+  --danger: #EF4444;
+  --danger-hover: #DC2626;
+  --bg: #F3F4F6;
+  --surface: #FFFFFF;
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --shadow-light: rgba(0, 0, 0, 0.04);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-focus: rgba(92, 106, 196, 0.4);
+}
+
+/* === Reset & base === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body and general styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-    opacity: 0;
-    animation: fadeInBody 1s ease forwards;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #f2f2f2, #e8edf3);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes fadeInBody {
-    to {
-        opacity: 1;
-    }
+/* === Barre de navigation === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  border-radius: 0 0 1rem 1rem;
 }
 
-/* Container for the profile form */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo {
+  height: 40px;
+  border-radius: 0.5rem;
+}
+
+.nav-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.logout-link {
+  background: var(--danger);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.logout-link:hover {
+  background: var(--danger-hover);
+  color: white;
+}
+
+/* === Formulaire profil === */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: var(--surface);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px var(--shadow-medium);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInContainer 1s ease 0.5s forwards;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes fadeInContainer {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Title styling */
 h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #4CAF50;
-    opacity: 0;
-    animation: fadeInText 1s ease 1s forwards;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary);
 }
 
-@keyframes fadeInText {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Form and field group styling */
 .form-group {
-    margin-bottom: 15px;
-    opacity: 0;
-    animation: fadeInFields 1s ease 1.5s forwards;
-}
-
-@keyframes fadeInFields {
-    to {
-        opacity: 1;
-    }
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  font-size: 15px;
 }
 
 .form-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: border-color 0.3s;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px var(--shadow-light);
 }
 
 .form-group input:focus {
-    border-color: #4CAF50;
-    outline: none;
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 4px var(--shadow-focus);
+  background-color: white;
 }
 
 .error {
-    color: #ff0000;
-    font-size: 0.9rem;
-    margin-top: 5px;
+  color: var(--danger);
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
-/* Submit button styling */
-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    width: 100%;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    opacity: 0;
-    animation: fadeInButton 1s ease 2s forwards;
+/* === Boutons === */
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
 }
 
-@keyframes fadeInButton {
-    to {
-        opacity: 1;
-    }
+button[type="submit"]:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.05);
 }
 
-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-/* Link to change password */
-a {
-    display: inline-block;
-    margin-top: 20px;
-    text-align: center;
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Style commun aux liens comme des boutons */
+/* === Liens boutons === */
 .button-group {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    opacity: 0;
-    animation: fadeInButtonGroup 1s ease 2.5s forwards;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-@keyframes fadeInButtonGroup {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Style bouton vert principal */
 .button-link {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  display: block;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .button-link:hover {
-    background-color: #45a049;
+  background-color: #2980b9;
+  transform: scale(1.05);
 }
 
-/* Style bouton secondaire (mot de passe) */
 .secondary-button {
-    background-color: #ddd;
-    color: #333;
+  background-color: #ddd;
+  color: #333;
 }
 
 .secondary-button:hover {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
-/* Style lien retour discret */
 .return-link {
-    background-color: transparent;
-    color: #4CAF50;
-    text-decoration: underline;
-    font-weight: normal;
-    padding: 10px 0;
+  background-color: transparent;
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: normal;
 }
 
 .return-link:hover {
-    color: #388e3c;
-    background-color: transparent;
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--primary-light);
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .button-group .button-link,
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+  }
 }

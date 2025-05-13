@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="{% static 'prediction/css/visualisation.css' %}">
 </head>
 <body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="{% static 'prediction/img/logo_supmti.png' %}" alt="Logo" class="nav-logo">
+            <span class="nav-title">SupMTI Dashboard</span>
+        </div>
+        <ul class="nav-links">
+            <!-- Accueil avant Prédiction -->
+            <li><a href="{% url 'home' %}" class="{% if request.path == '/home/' %}active{% endif %}">🏠 Accueil</a></li>
+            <li><a href="{% url 'predict' %}" class="{% if request.path == '/predict/' %}active{% endif %}">🧠 Prédiction</a></li>
+            <li><a href="{% url 'visualisation' %}" class="{% if request.path == '/visualisation/' %}active{% endif %}">📊 Visualisation</a></li>
+            <li><a href="mailto:rajaotianar@gmail.com">📩 Contact</a></li>
+            <li><a href="{% url 'update_profile' %}">👤 Mon Profil</a></li>
+            <li><a href="{% url 'logout' %}" class="logout-link">Se déconnecter</a></li>
+        </ul>
+    </nav>
+
 <div class="visualisation-container">
     <h2 align=center>Visualisation des données</h2>
 

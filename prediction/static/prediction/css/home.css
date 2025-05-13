@@ -1,4 +1,4 @@
-/* home.css - Dashboard moderne et fluide avec design pro */
+/* home.css - Dashboard moderne et fluide avec design pro optimisé */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
 :root {
@@ -6,6 +6,8 @@
   --primary: #5C6AC4;
   --primary-light: #7F8FF0;
   --accent: #F59E0B;
+  --danger: #EF4444;
+  --danger-hover: #DC2626;
   --bg: #F3F4F6;
   --surface: #FFFFFF;
   --glass: rgba(255, 255, 255, 0.7);
@@ -15,10 +17,14 @@
   --shadow-medium: rgba(0, 0, 0, 0.1);
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +35,15 @@ body {
   overflow-x: hidden;
 }
 
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+button, .btn, a, section, header {
+  transition: all 0.3s ease-in-out;
+}
 
 .container {
   max-width: 1280px;
@@ -40,7 +54,7 @@ a { text-decoration: none; color: inherit; }
   gap: 3rem;
 }
 
-/* Header génération */
+/* --- Header --- */
 header {
   position: relative;
   padding: 1.5rem;
@@ -52,10 +66,12 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   box-shadow: 0 8px 16px var(--shadow-light);
-  animation: fadeIn 0.5s ease;
+  animation: fadeIn 0.6s ease forwards;
 }
 
-.logo { height: 56px; }
+.logo {
+  height: 56px;
+}
 
 h1 {
   font-family: 'Inter', sans-serif;
@@ -69,20 +85,25 @@ h1 {
   color: var(--text-secondary);
 }
 
-/* Navigation : menu hamburger pour mobile */
+/* --- Navigation --- */
 .nav-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center; /* centre les boutons */
+  justify-content: center;
   align-items: center;
-  transition: max-height 0.4s ease;
+  transition: all 0.4s ease;
   margin-top: 1rem;
 }
 
 .menu-toggle {
   display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
+/* --- Boutons --- */
 .btn {
   padding: 0.75rem 1.5rem;
   font-weight: 500;
@@ -90,34 +111,75 @@ h1 {
   background: var(--primary);
   color: #fff;
   display: inline-block;
-  transition: transform 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px var(--shadow-light);
 }
 
 .btn:hover {
   background: var(--primary-light);
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 12px var(--shadow-medium);
 }
 
-.logout-btn { background: #EF4444; }
-.logout-btn:hover { background: #DC2626; }
+.btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 4px var(--shadow-medium);
+}
 
-/* Sections stylées */
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.logout-btn {
+  background: var(--danger);
+}
+
+.logout-btn:hover {
+  background: var(--danger-hover);
+}
+
+/* --- Boutons secondaires --- */
+.btn-secondary {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: none;
+  font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-light);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- Sections --- */
 section {
   background: var(--surface);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 8px 16px var(--shadow-light);
-  animation: fadeInUp 0.6s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
 }
 
-section h2, .tip-section h3 {
+section:nth-of-type(1) { animation-delay: 0.2s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+
+section h2,
+.tip-section h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--primary);
 }
 
-/* Statistiques cards modernisées */
+/* --- Statistiques --- */
 .stats-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -131,12 +193,12 @@ section h2, .tip-section h3 {
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 8px 16px var(--shadow-medium);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .stat-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.02);
   box-shadow: 0 12px 24px var(--shadow-medium);
+  animation: pulse 0.6s ease-in-out;
 }
 
 .stat-card h3 {
@@ -151,12 +213,13 @@ section h2, .tip-section h3 {
   color: var(--text-secondary);
 }
 
-/* Détails statistiques animés */
+/* --- More Stats --- */
 #more-stats {
   display: none;
   margin-top: 1.5rem;
   border-top: 1px solid #E5E7EB;
   padding-top: 1.5rem;
+  text-align: left;
 }
 
 #more-stats li {
@@ -164,7 +227,7 @@ section h2, .tip-section h3 {
   font-size: 0.9rem;
 }
 
-/* Astuce du jour avec carrousel */
+/* --- Tip Section --- */
 .tip-section {
   position: relative;
   overflow: hidden;
@@ -177,7 +240,7 @@ section h2, .tip-section h3 {
   animation: tipFade 5s infinite;
 }
 
-/* Footer épuré */
+/* --- Footer --- */
 footer {
   text-align: center;
   font-size: 0.85rem;
@@ -185,38 +248,117 @@ footer {
   padding: 1rem 0;
 }
 
-footer a { color: var(--primary); font-weight: 500; }
+footer a {
+  color: var(--primary);
+  font-weight: 500;
+}
 
-/* Animations clés */
+/* --- Animations --- */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes tipFade {
-  0%,100% { opacity: 0; }
-  10%,90% { opacity: 1; }
+  0%, 100% { opacity: 0; transform: translateX(10px); }
+  10%, 90% { opacity: 1; transform: translateX(0); }
 }
 
-/* Responsive */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .menu-toggle {
     display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
   }
+
   .nav-buttons {
     flex-direction: column;
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
   }
+
   .menu-toggle:checked + .nav-buttons {
     max-height: 300px;
+    opacity: 1;
   }
-  header { flex-direction: column; gap: 1rem; }
+}
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 1rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo {
+  height: 40px;
+  border-radius: 0.5rem;
+}
+
+.nav-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: var(--primary-light);
+}
+
+.logout-link {
+  background: var(--danger);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.logout-link:hover {
+  background: var(--danger-hover);
+}
+/* Style pour les liens actifs dans la navigation */
+.nav-links a.active {
+    background-color: #007BFF;  /* Couleur de fond du lien actif */
+    color: white;               /* Couleur du texte du lien actif */
 }
