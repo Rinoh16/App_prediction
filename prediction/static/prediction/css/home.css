@@ -362,3 +362,11 @@ footer a {
     background-color: #007BFF;  /* Couleur de fond du lien actif */
     color: white;               /* Couleur du texte du lien actif */
 }
+/* Mise en valeur du nom de l'utilisateur */
+.highlighted-name {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  text-transform: none;
+}

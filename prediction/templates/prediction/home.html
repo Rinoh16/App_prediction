@@ -30,7 +30,7 @@
             <div class="logo-container">
                 <img src="{% static 'prediction/img/logo_supmti.png' %}" alt="Logo" class="logo">
             </div>
-            <h1>Bienvenue sur le tableau de bord</h1>
+            <h1>👋 Bienvenue, <span class="highlighted-name">{{ user.nom|upper }} {{ user.prenom|title }}</span></h1>
             <p class="datetime">
                 <span id="date"></span> | <span id="time"></span>
             </p>

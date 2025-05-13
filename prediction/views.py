@@ -54,7 +54,8 @@ def register(request):
 # Home view
 @login_required_session
 def home(request):
-    return render(request, 'prediction/home.html')
+    user = request.session.get('user')  # récupère les infos stockées lors du login
+    return render(request, 'prediction/home.html', {'user': user})
 
 # prediction/views.py
 def logout(request):
@@ -115,62 +116,86 @@ def predict_status(request):
 @login_required_session
 def visualisation(request):
     import matplotlib
-    matplotlib.use('Agg')  # Pour éviter l'erreur Tkinter
-
+    matplotlib.use('Agg')  # Évite l'erreur Tkinter
     import matplotlib.pyplot as plt
+    from mpl_toolkits.mplot3d import Axes3D  # Pour 3D
     import seaborn as sns
     import pandas as pd
     import io
     import base64
 
+    # Chargement du dataset
     df = pd.read_csv("dataset_statut_emploi_final.csv", encoding="utf-8-sig", sep=';')
-    graph_type = request.GET.get('graph', 'age_distribution')
 
-    plt.figure(figsize=(6, 4))
+    # Style professionnel
+    sns.set(style="whitegrid", palette="Set2", font_scale=1.2)
+
+    graph_type = request.GET.get('graph', 'age_distribution')
+    fig = plt.figure(figsize=(8, 5))
+    
+    # Graphiques améliorés
     if graph_type == 'age_distribution':
-        sns.histplot(df['Âge'], kde=True, bins=20)
-        plt.title("Répartition des âges")
-        plt.xlabel("Âge")
-        plt.ylabel("Fréquence")
+        sns.histplot(df['Âge'], kde=True, bins=25, color="skyblue", edgecolor="black")
+        plt.title("Répartition des âges", fontsize=14)
+        plt.xlabel("Âge", fontsize=12)
+        plt.ylabel("Nombre", fontsize=12)
+        plt.grid(True)
 
     elif graph_type == 'salary_boxplot':
-        sns.boxplot(x=df['Salaire espéré'])
-        plt.title("Boxplot des salaires espérés")
-        plt.xlabel("Salaire Espéré")
+        sns.boxplot(x=df['Salaire espéré'], color='lightcoral')
+        plt.title("Boxplot des salaires espérés", fontsize=14)
+        plt.xlabel("Salaire Espéré", fontsize=12)
+        plt.grid(True)
 
     elif graph_type == 'experience_salary':
-        sns.scatterplot(x=df['Expérience (années)'], y=df['Salaire espéré'])
-        plt.title("Expérience vs Salaire")
-        plt.xlabel("Expérience (années)")
-        plt.ylabel("Salaire Espéré")
+        sns.scatterplot(x='Expérience (années)', y='Salaire espéré', data=df, hue='Statut d\'emploi', palette='coolwarm', s=80)
+        plt.title("Expérience vs Salaire (par Statut)", fontsize=14)
+        plt.xlabel("Expérience (années)", fontsize=12)
+        plt.ylabel("Salaire Espéré", fontsize=12)
+        plt.grid(True)
 
     elif graph_type == 'status_experience':
-        sns.boxplot(x=df["Statut d'emploi"], y=df["Expérience (années)"])
-        plt.title("Statut d'emploi vs Expérience")
-        plt.xlabel("Statut d'emploi")
-        plt.ylabel("Expérience (années)")
+        sns.boxplot(x="Statut d'emploi", y="Expérience (années)", data=df, palette="muted")
+        plt.title("Statut d'emploi vs Expérience", fontsize=14)
+        plt.xlabel("Statut d'emploi", fontsize=12)
+        plt.ylabel("Expérience (années)", fontsize=12)
+        plt.grid(True)
 
     elif graph_type == 'status_education':
-        sns.countplot(x=df["Niveau d'éducation"], hue=df["Statut d'emploi"])
-        plt.title("Statut d'emploi vs Niveau d'éducation")
-        plt.xlabel("Niveau d'éducation")
-        plt.ylabel("Nombre")
+        sns.countplot(x="Niveau d'éducation", hue="Statut d'emploi", data=df, palette="Set1")
+        plt.title("Statut d'emploi par Niveau d'éducation", fontsize=14)
+        plt.xlabel("Niveau d'éducation", fontsize=12)
+        plt.ylabel("Nombre", fontsize=12)
         plt.xticks(rotation=30)
+        plt.grid(True)
+
+    elif graph_type == '3d_experience_salary':
+        ax = fig.add_subplot(111, projection='3d')
+        color_map = {"Employé": "green", "Non Employé": "red"}
+        colors = df["Statut d'emploi"].map(color_map)
+
+        ax.scatter(df["Expérience (années)"], df["Âge"], df["Salaire espéré"], c=colors, s=50)
+        ax.set_xlabel("Expérience (années)")
+        ax.set_ylabel("Âge")
+        ax.set_zlabel("Salaire espéré")
+        ax.set_title("Graphique 3D: Expérience, Âge, Salaire", fontsize=14)
 
     else:
-        plt.text(0.5, 0.5, "Graphique non reconnu", ha='center')
+        plt.text(0.5, 0.5, "Graphique non reconnu", ha='center', fontsize=14)
 
-    # Sauvegarder en mémoire
+    # Sauvegarde en mémoire
     buf = io.BytesIO()
     plt.tight_layout()
-    plt.savefig(buf, format='png')
+    plt.savefig(buf, format='png', dpi=120)
     buf.seek(0)
     img_data = base64.b64encode(buf.read()).decode('utf-8')
+    buf.close()
 
     return render(request, 'prediction/visualisation.html', {
         'img_data': img_data,
         'graph_type': graph_type
     })
+
 
 from django.shortcuts import render, redirect
 from .forms import UserUpdateForm, CustomPasswordChangeForm
